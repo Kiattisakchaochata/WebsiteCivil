@@ -15,7 +15,7 @@ export default function GallerySection() {
     { src: 'gallery5.png', title: 'Hardener Floor', tag: 'เพิ่มความแข็งแรง' },
     { src: 'epoxy1.png', title: 'Epoxy ป้องกันสารเคมี', tag: 'โรงงานอาหาร' },
     { src: 'hardener.png', title: 'เพิ่มความแข็งพื้น', tag: 'คลังสินค้า' },
-    { src: 'Pu.png', title: 'PU Foam Injection', tag: 'กันซึมแนวรอยต่อ' },
+    { src: 'pu1.png', title: 'PU Foam Injection', tag: 'กันซึมแนวรอยต่อ' },
     { src: 'wall-crack.png', title: 'ซ่อมผนังแตกร้าว', tag: 'อาคารสูง' },
     { src: 'waterproof.png', title: 'ระบบกันซึมดาดฟ้า', tag: 'งานอาคาร' },
   ];

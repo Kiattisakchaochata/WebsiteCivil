@@ -34,7 +34,7 @@ const services: ServiceItem[] = [
     id: 3,
     category: 'งานติดตั้ง',
     title: 'พื้น PU',
-    image: '/images/pu.png',
+    image: '/images/pu1.png',
     description:
       'ทางเลือกใหม่สำหรับโรงงานที่ต้องการมาตรฐานสูงสุด ทนเคมี ทนร้อน ทนเย็น และปลอดภัยต่ออาหาร',
   },

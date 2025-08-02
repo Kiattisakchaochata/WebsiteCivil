@@ -21,6 +21,7 @@ export default function CategorySection() {
             src="/images/install-new.png"
             alt="ติดตั้งพื้น"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
@@ -40,6 +41,7 @@ export default function CategorySection() {
             src="/images/repair-new.png"
             alt="ซ่อมแซม"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">

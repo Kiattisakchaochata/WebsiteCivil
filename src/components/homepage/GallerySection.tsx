@@ -50,6 +50,7 @@ export default function GallerySection() {
                   src={`/images/${item.src}`}
                   alt={item.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover object-center"
                 />
 

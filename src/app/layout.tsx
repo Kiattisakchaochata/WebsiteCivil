@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import NewNavbar from '@/components/homepage/NewNavbar'
 import ContactFloatingButton from '@/components/shared/ContactFloatingButton'
+import UtilityFloatingButtons from '@/components/shared/UtilityFloatingButtons'
 import Footer from '@/components/homepage/Footer'
 import Script from 'next/script'
 
@@ -21,13 +22,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
             j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
             f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-XXXXXXX');
+            })(window,document,'script','dataLayer','GTM-KW8DCSP3');
           `}
         </Script>
 
         {/* ✅ Google Analytics (GA4) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          src="https://www.googletagmanager.com/gtag/js?id=G-6306521732"
           strategy="afterInteractive"
         />
         <Script id="ga-init" strategy="afterInteractive">
@@ -35,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
+            gtag('config', 'G-6306521732');
           `}
         </Script>
 
@@ -50,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', 'XXXXXXXXXXXXXXX');
+            fbq('init', '602322676022753');
             fbq('track', 'PageView');
           `}
         </Script>
@@ -59,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             height="1"
             width="1"
             style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=602322676022753&ev=PageView&noscript=1"
           />
         </noscript>
 
@@ -67,14 +68,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script
           id="google-ads"
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-4786491709"
         />
         <Script id="google-ads-config" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-XXXXXXXXXX');
+            gtag('config', 'AW-4786491709');
           `}
         </Script>
       </head>
@@ -83,7 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Google Tag Manager noscript fallback */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KW8DCSP3"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
@@ -93,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NewNavbar />
         {children}
         <ContactFloatingButton />
+        <UtilityFloatingButtons />
         <Footer />
       </body>
     </html>

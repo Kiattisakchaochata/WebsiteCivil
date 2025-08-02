@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import NewNavbar from '@/components/homepage/NewNavbar'
+import ContactFloatingButton from '@/components/shared/ContactFloatingButton'
 import Footer from '@/components/homepage/Footer'
 import Script from 'next/script'
 
@@ -91,6 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <NewNavbar />
         {children}
+        <ContactFloatingButton />
         <Footer />
       </body>
     </html>

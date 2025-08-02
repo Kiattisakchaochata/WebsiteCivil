@@ -11,20 +11,20 @@ export default function AnalyticsHead() {
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
             j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
             f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-XXXXXXX');
+            })(window,document,'script','dataLayer','GTM-KW8DCSP3');
           `,
         }}
       />
 
       {/* Google Analytics GA4 */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-6306521732"></script>
       <script
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
+            gtag('config', 'G-6306521732');
           `,
         }}
       />
@@ -41,7 +41,7 @@ export default function AnalyticsHead() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', 'XXXXXXXXXXXXXXX');
+            fbq('init', '602322676022753');
             fbq('track', 'PageView');
           `,
         }}
@@ -51,19 +51,19 @@ export default function AnalyticsHead() {
           height="1"
           width="1"
           style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"
+          src="https://www.facebook.com/tr?id=602322676022753&ev=PageView&noscript=1"
         />
       </noscript>
 
       {/* Google Ads Conversion Tracking */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-4786491709"></script>
       <script
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-XXXXXXXXXX');
+            gtag('config', 'AW-4786491709');
           `,
         }}
       />

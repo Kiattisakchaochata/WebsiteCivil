@@ -15,7 +15,7 @@ export default function HeroSection() {
       />
 
       {/* ชั้น Overlay สีดำบางๆ */}
-      <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+      <div className="absolute inset-0 bg-black/0 flex items-center justify-center">
         {/* กล่องข้อความ + พื้นหลังข้อความ */}
         <div className="px-6 py-4 rounded-md text-center">
           <h1 className="text-white text-3xl md:text-5xl font-bold leading-snug drop-shadow">

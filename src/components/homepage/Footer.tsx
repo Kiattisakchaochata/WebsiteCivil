@@ -12,18 +12,16 @@ export default function Footer() {
     setShowModal(true)
   }
 
-  const confirmCall = () => {
-    setShowModal(false)
-    window.location.href = `tel:${selectedNumber}`
-  }
-
   return (
     <>
-      <footer className="bg-[#1F2560] text-white text-sm py-4 px-6 relative">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-center md:text-left">Copyright © 2025</div>
+      <footer className="bg-[#1F2560] text-white text-sm py-6 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between items-center gap-4 md:gap-6">
+          <div className="text-center md:text-left">© 2025 Civil Products</div>
+
           <div className="text-center font-medium">ช่องทางติดต่อ</div>
-          <div className="flex gap-6 items-center text-white text-base">
+
+          {/* ✅ Contact buttons */}
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 text-base">
             <a
               href="https://www.facebook.com/profile.php?id=61577460965495"
               target="_blank"
@@ -70,23 +68,23 @@ export default function Footer() {
             <h2 className="text-xl font-bold text-gray-800 mb-3">ต้องการโทรออก?</h2>
             <p className="text-gray-600 text-base mb-6">เบอร์: {selectedNumber}</p>
 
-            <div className="flex justify-around">
-  <button
-    onClick={() => setShowModal(false)}
-    className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
-  >
-    ยกเลิก
-  </button>
+            <div className="flex gap-4 justify-center">
+              <button
+                onClick={() => setShowModal(false)}
+                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 w-1/2"
+              >
+                ยกเลิก
+              </button>
 
-  <a href={`tel:${selectedNumber}`} className="block w-full ml-2">
-    <button
-      className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 w-full"
-      onClick={() => setShowModal(false)}
-    >
-      โทรออก
-    </button>
-  </a>
-</div>
+              <a href={`tel:${selectedNumber}`} className="w-1/2">
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 w-full"
+                >
+                  โทรออก
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       )}

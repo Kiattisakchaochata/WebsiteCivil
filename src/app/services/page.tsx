@@ -83,7 +83,13 @@ export default function ServicesPage() {
               onClick={() => openModal(s)}
             >
               <div className="relative h-48">
-                <Image src={s.image} alt={s.title} fill className="object-cover" />
+                <Image
+  src={s.image}
+  alt={s.title}
+  fill
+  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+  className="object-cover"
+/>
               </div>
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">{s.title}</h3>

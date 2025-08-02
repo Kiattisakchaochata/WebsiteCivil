@@ -1,11 +1,11 @@
 'use client'
 
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF, FaLine, FaPhoneAlt } from 'react-icons/fa'
 
 export default function Footer() {
   return (
     <footer className="bg-[#1F2560] text-white text-sm py-4 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         {/* Left - Copyright */}
         <div className="text-center md:text-left">
           Copyright © 2025
@@ -16,19 +16,45 @@ export default function Footer() {
           ช่องทางติดต่อ
         </div>
 
-        {/* Right - Social Icons */}
-        <div className="flex gap-4 text-white text-lg">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+        {/* Right - ช่องทาง */}
+        <div className="flex gap-6 items-center text-white text-base">
+          {/* Facebook */}
+          <a
+            href="https://www.facebook.com/profile.php?id=61577460965495"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-gray-300"
+          >
             <FaFacebookF />
+            Facebook
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-            <FaTwitter />
+
+          {/* Line */}
+          <a
+            href="https://line.me/R/ti/p/@yourlineid"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-gray-300"
+          >
+            <FaLine />
+            Line
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-            <FaInstagram />
+
+          {/* Phone */}
+          <a
+            href="tel:0845552781"
+            className="flex items-center gap-2 hover:text-gray-300"
+          >
+            <FaPhoneAlt />
+            084-555-2781
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-            <FaLinkedinIn />
+
+          <a
+            href="tel:0982546476"
+            className="flex items-center gap-2 hover:text-gray-300"
+          >
+            <FaPhoneAlt />
+            098-254-6476
           </a>
         </div>
       </div>

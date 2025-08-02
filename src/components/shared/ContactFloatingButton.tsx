@@ -46,7 +46,7 @@ export default function ContactFloatingButton() {
 
             {/* Facebook */}
             <a
-              onClick={() => window.open('https://m.me/105968268389706', '_blank')}
+              onClick={() => window.open('https://m.me/715352691654101', '_blank')}
               className="cursor-pointer flex items-center bg-white rounded-full px-4 py-2 shadow hover:scale-105 transition"
             >
               <span className="text-gray-800 mr-2">แชทเฟซบุ๊ก</span>

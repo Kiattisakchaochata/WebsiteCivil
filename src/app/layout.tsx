@@ -1,10 +1,10 @@
+// ✅ app/layout.tsx
 import '../styles/globals.css'
 import NewNavbar from '@/components/homepage/NewNavbar'
 import ContactFloatingButton from '@/components/shared/ContactFloatingButton'
 import UtilityFloatingButtons from '@/components/shared/UtilityFloatingButtons'
 import Footer from '@/components/homepage/Footer'
 import Script from 'next/script'
-import AnalyticsHead from '@/components/analytics/AnalyticsHead' // ✅ import มาเพิ่ม
 
 export const metadata = {
   title: 'Civil Products',
@@ -15,29 +15,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="th">
       <head>
-        {/* ✅ Global Meta + Analytics */}
-        <AnalyticsHead />
-        <meta property="og:image" content="/images/og-cover.jpg" />
+        {/* ✅ Favicon และ OG */}
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="/images/og-cover.jpg" />
 
-        {/* ✅ Google Tag Manager */}
-        <Script id="gtm-head" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-KW8DCSP3');
-          `}
-        </Script>
-
-        {/* ✅ Google Analytics (GA4) */}
+        {/* ✅ Google Analytics GA4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-6306521732"
           strategy="afterInteractive"
         />
-        <Script id="ga-init" strategy="afterInteractive">
+        <Script id="ga4-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -46,7 +33,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
 
-        {/* ✅ Facebook Pixel */}
+        {/* ✅ Google Ads Conversion Tracking */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-4786491709"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-4786491709');
+          `}
+        </Script>
+
+        {/* ✅ Facebook Pixel (Meta) */}
         <Script id="fb-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -70,24 +71,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </noscript>
 
-        {/* ✅ Google Ads Conversion Tracking */}
-        <Script
-          id="google-ads"
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-4786491709"
-        />
-        <Script id="google-ads-config" strategy="afterInteractive">
+        {/* ✅ Google Tag Manager */}
+        <Script id="gtm-head" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-4786491709');
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KW8DCSP3');
           `}
         </Script>
       </head>
 
       <body>
-        {/* Google Tag Manager noscript fallback */}
+        {/* ✅ GTM fallback for noscript */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-KW8DCSP3"
@@ -97,6 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </noscript>
 
+        {/* ✅ Main Layout */}
         <NewNavbar />
         {children}
         <ContactFloatingButton />

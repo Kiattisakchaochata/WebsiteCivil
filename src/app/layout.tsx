@@ -4,6 +4,7 @@ import ContactFloatingButton from '@/components/shared/ContactFloatingButton'
 import UtilityFloatingButtons from '@/components/shared/UtilityFloatingButtons'
 import Footer from '@/components/homepage/Footer'
 import Script from 'next/script'
+import AnalyticsHead from '@/components/analytics/AnalyticsHead' // ✅ import มาเพิ่ม
 
 export const metadata = {
   title: 'Civil Products',
@@ -14,6 +15,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="th">
       <head>
+        {/* ✅ Global Meta + Analytics */}
+        <AnalyticsHead />
+        <meta property="og:image" content="/images/og-cover.jpg" />
+        <link rel="icon" href="/favicon.ico" />
+
         {/* ✅ Google Tag Manager */}
         <Script id="gtm-head" strategy="afterInteractive">
           {`

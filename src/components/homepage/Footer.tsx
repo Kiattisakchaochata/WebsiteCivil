@@ -33,7 +33,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://line.me/R/ti/p/@yourlineid"
+              href="https://line.me/R/ti/g/4RwBRWW4_9"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-gray-300"

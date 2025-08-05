@@ -35,7 +35,7 @@ export default function ContactFloatingButton() {
 
             {/* Line */}
             <a
-              href="https://line.me/R/ti/p/@yourlineid"
+              href="https://line.me/R/ti/g/4RwBRWW4_9"
               target="_blank"
               className="flex items-center bg-white rounded-full px-4 py-2 shadow hover:scale-105 transition"
               rel="noopener noreferrer"

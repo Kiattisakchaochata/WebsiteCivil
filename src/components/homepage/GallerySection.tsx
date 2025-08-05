@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -8,16 +9,16 @@ import { Autoplay } from 'swiper/modules';
 
 export default function GallerySection() {
   const images = [
-    { src: 'gallery1.png', title: 'ซ่อมรอยร้าวพื้น', tag: 'งานซ่อมแซม' },
-    { src: 'gallery2.png', title: 'ปรับระดับพื้น', tag: 'งานติดตั้ง' },
-    { src: 'gallery3.png', title: 'กันซึมดาดฟ้า', tag: 'เคลือบผิว' },
-    { src: 'gallery4.png', title: 'เคลือบ Epoxy', tag: 'พื้นโรงงาน' },
-    { src: 'gallery5.png', title: 'Hardener Floor', tag: 'เพิ่มความแข็งแรง' },
-    { src: 'epoxy1.png', title: 'Epoxy ป้องกันสารเคมี', tag: 'โรงงานอาหาร' },
-    { src: 'hardener.png', title: 'เพิ่มความแข็งพื้น', tag: 'คลังสินค้า' },
-    { src: 'pu1.png', title: 'PU Foam Injection', tag: 'กันซึมแนวรอยต่อ' },
-    { src: 'wall-crack.png', title: 'ซ่อมผนังแตกร้าว', tag: 'อาคารสูง' },
-    { src: 'waterproof.png', title: 'ระบบกันซึมดาดฟ้า', tag: 'งานอาคาร' },
+    { src: 'gallery1.png', title: 'ติดตั้งพื้นคอนกรีต', tag: 'งานติดตั้ง', link: '/services#install' },
+    { src: 'gallery2.png', title: 'ปรับระดับพื้น', tag: 'งานติดตั้ง', link: '/services#install' },
+    { src: 'gallery3.png', title: 'กันซึมดาดฟ้า', tag: 'เคลือบผิว', link: '/services#waterproof' },
+    { src: 'gallery4.png', title: 'ซ่อมรอยร้าวพื้น', tag: 'งานซ่อมแซม', link: '/services#repair' },
+    { src: 'gallery5.png', title: 'ทากันซึมดาดฟ้า', tag: 'งานกันซึม', link: '/services#waterproof' },
+    { src: 'epoxy1.png', title: 'อีพ็อกซี่ ป้องกันสารเคมี', tag: 'เคลือบผิว', link: '/services#epoxy' },
+    { src: 'hardener.png', title: 'เพิ่มความแข็งพื้น', tag: 'เพิ่มความแข็งแรง', link: '/services#hardener' },
+    { src: 'pu1.png', title: 'PU Foam Injection', tag: 'กันซึมแนวรอยต่อ', link: '/services#pu' },
+    { src: 'wall-crack.png', title: 'ซ่อมผนังแตกร้าว', tag: 'อาคารสูง', link: '/services#wall' },
+    { src: 'waterproof.png', title: 'ระบบกันซึมดาดฟ้า', tag: 'กันซึมดาดฟ้า', link: '/services#waterproof' },
   ];
 
   return (
@@ -30,10 +31,7 @@ export default function GallerySection() {
           spaceBetween={20}
           loop={true}
           speed={4000}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-          }}
+          autoplay={{ delay: 0, disableOnInteraction: false }}
           slidesPerView={2}
           breakpoints={{
             640: { slidesPerView: 3 },
@@ -44,31 +42,29 @@ export default function GallerySection() {
         >
           {images.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-[180px] md:h-[200px] lg:h-[220px] rounded overflow-hidden shadow group">
-                {/* ภาพแนวนอน */}
-                <Image
-                  src={`/images/${item.src}`}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover object-center"
-                />
-
-                {/* Overlay แบบ Apple TV */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-between p-3">
-                  <div>
-                    <div className="w-8 h-8 bg-white rounded-full shadow-md"></div>
-                  </div>
-
-                  <div className="text-white">
-                    <button className="bg-white text-black text-xs px-3 py-1 rounded font-semibold mb-2">
-                      คลิกดูเพิ่มเติม
-                    </button>
-                    <p className="text-sm font-semibold">{item.title}</p>
-                    <p className="text-xs text-gray-300">{item.tag}</p>
+              <Link href={item.link}>
+                <div className="relative w-full h-[180px] md:h-[200px] lg:h-[220px] rounded overflow-hidden shadow group cursor-pointer">
+                  <Image
+                    src={`/images/${item.src}`}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-between p-3">
+                    <div>
+                      <div className="w-8 h-8 bg-white rounded-full shadow-md"></div>
+                    </div>
+                    <div className="text-white">
+                      <div className="bg-white text-black text-xs px-3 py-1 rounded font-semibold mb-2 inline-block">
+                        คลิกดูเพิ่มเติม
+                      </div>
+                      <p className="text-sm font-semibold">{item.title}</p>
+                      <p className="text-xs text-gray-300">{item.tag}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

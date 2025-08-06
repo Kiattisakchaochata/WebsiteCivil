@@ -26,6 +26,8 @@ export default function HeroSection() {
           <Link
             href="https://m.me/715352691654101"
             className="inline-block border border-white !text-yellow-500 px-6 py-3 rounded-full font-semibold hover:bg-white/20 transition duration-300"
+            target="_blank" // ✅ เปิดในแท็บใหม่
+            rel="noopener noreferrer" // ✅ เพิ่มความปลอดภัย
           >
             ติดต่อเรา
           </Link>

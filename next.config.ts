@@ -13,13 +13,15 @@ const ContentSecurityPolicy = isProd
       https://*.doubleclick.net
       https://*.facebook.net
       https://*.facebook.com
-      https://*.google.com;
+      https://*.google.com
+      https://www.google.com;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     font-src 'self' https://fonts.gstatic.com data:;
     img-src 'self' data: blob:
       https://res.cloudinary.com
       https://*.doubleclick.net
       https://www.google.com
+      https://www.google.co.th
       https://www.google-analytics.com
       https://www.googleadservices.com
       https://stats.g.doubleclick.net
@@ -31,6 +33,7 @@ const ContentSecurityPolicy = isProd
       https://*.facebook.com
       https://www.googleadservices.com
       https://googleads.g.doubleclick.net
+      https://www.google.com
       https://res.cloudinary.com;
     frame-src
       https://*.googletagmanager.com
@@ -57,11 +60,6 @@ const nextConfig = {
             key: "X-Content-Type-Options",
             value: "nosniff",
           },
-          // 🔥 ลบ X-Frame-Options เพื่อให้ pixel ทำงานได้
-          // {
-          //   key: "X-Frame-Options",
-          //   value: "SAMEORIGIN",
-          // },
           {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
